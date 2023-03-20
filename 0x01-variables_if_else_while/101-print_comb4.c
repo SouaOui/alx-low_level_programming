@@ -1,17 +1,16 @@
 #include <stdio.h>
-
-/*
- * this is the program to display the three digits combination
- * Return : 0 always sucess
- * function main() : Entry point
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
  */
-
 int main(void)
 {
 	int i;
 	int j;
 	int k;
 
+	/*here is my code*/
 	for (i = 0; i <= 7; i++)
 	{
 		for (j = i + 1 ; j  <= 8; j++)
