@@ -1,29 +1,18 @@
 #include "main.h"
-#include<string.h>
-
 /**
  * main - Entry point
  *
  * Return: Always 0 (Success)
  */
-
 int main(void)
 {
-	_putchar();
-	return (0);
-}
-
-void _putchar(void)
-{
-	char ch[20] = "_putchar";
-	int l;
-	int i = 0;
-
-	l = strlen(ch);
-	while (i <= l)
+	char *string = "_putchar";
+	
+	while (*string)
 	{
-		putchar(ch[i]);
-		i++;
+		_putchar(*string);
+		string++;
 	}
-	putchar('\n');
+	_putchar('\n');
+	return (0);
 }

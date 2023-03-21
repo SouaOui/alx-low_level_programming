@@ -1,8 +1,8 @@
-#ifndef MAIN_H_
-#define MAIN_H_
+#ifndef MAIN_H
+#define MAIN_H
 
-#include<stdio.h>
+#include <stdio.h>
 
-void _putchar(void);
+int _putchar(char );
 
 #endif
