@@ -1,8 +1,9 @@
-#include "main.h"
-#include<stdio.h>
+#include <stdlib.h>
+#include <stdio.h>
 /**
- * main - tests function that prints if integer is positive or negative
- * Return: 0
+ * positive_or_negative - check number
+ * @i: input value
+ * Return: Always 0 (Success)
  */
 void positive_or_negative(int i)
 {
@@ -10,6 +11,6 @@ void positive_or_negative(int i)
 		printf("%d is positive\n", i);
 	else if (i == 0)
 		printf("%d is zero\n", i);
-        else if (i < 0)
+	else
 		printf("%d is negative\n", i);
 }
