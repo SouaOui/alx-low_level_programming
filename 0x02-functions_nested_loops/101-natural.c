@@ -1,4 +1,5 @@
 #include "main.h"
+#include<stdio.h>
 /**
  * print_sum_below_1024 - print sum of multiple five and three numbers
  */
