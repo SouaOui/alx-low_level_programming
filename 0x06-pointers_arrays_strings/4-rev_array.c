@@ -14,6 +14,6 @@ void reverse_array(int *a, int n)
 	{
 		save = *(a + i);
 		*(a + i) = *(a + n - i - 1);
-		*(a + n - i - 1) = *(a + i);
+		*(a + n - i - 1) = save;
 	}
 }
