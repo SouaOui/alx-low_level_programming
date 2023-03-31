@@ -10,7 +10,7 @@
 char *rot13(char *s)
 {
 	int i, j;
-	char *rot13 = s;
+	char *rot = s;
 	char *base1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char *rot13 = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
