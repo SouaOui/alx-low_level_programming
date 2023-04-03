@@ -18,7 +18,11 @@ char *_strchr(char *s, char c)
 			break;
 	}
 	if (i <= len - 1)
+	{
 		return (s + i);
-	else 
-		return (NULL);
-}	
+	}
+	else
+	{
+	return (NULL);
+	}
+}
