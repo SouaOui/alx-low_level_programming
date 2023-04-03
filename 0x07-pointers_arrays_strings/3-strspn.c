@@ -26,7 +26,7 @@ unsigned int _strspn(char *s, char *accept)
 			}
 		}
 	}
-	if (x == 0 || x == 1)
+	if (x == 1)
 	{
 		return (strlen(accept) + 1);
 	}
