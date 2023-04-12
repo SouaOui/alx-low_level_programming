@@ -7,16 +7,15 @@
  */
 unsigned int _strlen(char *s)
 {
-        unsigned int len = 0;
+unsigned int len = 0;
 
-        while (*s)
-        {
-                len++;
-                s++;
-        }
-        return (len);
+while (*s)
+{
+	len++;
+	s++;
 }
-#include "main.h"
+return (len);
+}
 /**
  * _strcpy - copy the string pointed to by src to dest
  * Description: copy a string pointed by a pointer to another string
@@ -44,7 +43,7 @@ char *str_concat(char *s1, char *s2)
 {
 	char *result;
 	int i, j;
-	
+
 	if (s2 == NULL)
 	{
 		s2 = "";
@@ -66,4 +65,3 @@ char *str_concat(char *s1, char *s2)
 
 	return (result);
 }
-
