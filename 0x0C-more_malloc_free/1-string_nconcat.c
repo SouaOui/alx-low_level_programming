@@ -5,6 +5,7 @@
  * @s1: pointer to string
  * @s2: pointer to string
  * @n: unsigned integer positive
+ * Return: returns a pointer if succes and NULL if Failure
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
@@ -30,7 +31,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		result[i] = s2[j];
 		i++;
 	}
-	
 	result[i] = '\0';
 	return (result);
 }
