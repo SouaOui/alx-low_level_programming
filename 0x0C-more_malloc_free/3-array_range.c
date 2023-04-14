@@ -9,10 +9,12 @@ int *array_range(int min, int max)
 {
 	int i = 0;
 	int *table;
-
+	
+	if (min > max)
+		return (NULL);
 	table = malloc((max - min + 1) * sizeof(int));
 
-	if (table == NULL || min > max)
+	if (table == NULL)
 		return (NULL);
 	while (i <= (max - min))
 	{
