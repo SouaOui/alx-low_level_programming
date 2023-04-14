@@ -7,9 +7,8 @@
  */
 int *array_range(int min, int max)
 {
-	int i = 0;
-	int *table;
-	
+	int i = 0, *table;
+
 	if (min > max)
 		return (NULL);
 	table = malloc((max - min + 1) * sizeof(int));
@@ -23,4 +22,3 @@ int *array_range(int min, int max)
 	}
 	return (table);
 }
-
