@@ -1,4 +1,4 @@
-#General
+# General
 
 ## Learning linked lists in C can be highly beneficial for your programming skills because:
 
