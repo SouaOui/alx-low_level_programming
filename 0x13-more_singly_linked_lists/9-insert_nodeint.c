@@ -1,9 +1,9 @@
 #include"lists.h"
 /**
- *  * num_node - function to calculate the length of the list
- *   * @head: pointer to first node in the list
- *    * Return: return the number of node and 0 if empty
- *     */
+ * num_node - function to calculate the length of the list
+ * @head: pointer to first node in the list
+ * Return: return the number of node and 0 if empty
+ */
 unsigned int num_node(listint_t *head)
 {
 	unsigned int len = 0;
@@ -29,7 +29,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 
 	number_node = num_node(*head);
 
-	if (*head == NULL && idx != 0 )
+	if (*head == NULL && idx != 0)
 		return (NULL);
 	if (idx > number_node)
 		return (NULL);
@@ -55,7 +55,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 			current = current->next;
 		if (current == NULL)
 		{
-			free (new_node);
+			free(new_node);
 			return (NULL);
 		}
 		new_node->next = current->next;
