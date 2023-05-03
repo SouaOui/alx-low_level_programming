@@ -1,7 +1,9 @@
 #include"lists.h"
 /**
- * commnets for your function goes here
- */
+ *  * num_node - function to calculate the length of the list
+ *   * @head: pointer to first node in the list
+ *    * Return: return the number of node and 0 if empty
+ *     */
 unsigned int num_node(listint_t *head)
 {
 	unsigned int len = 0;
@@ -14,20 +16,6 @@ unsigned int num_node(listint_t *head)
 	return (len);
 }
 /**
- * allocate_node - allocate memory for node
- * @n: data of the node
- * Return: adress of the node
- */
-listint_t *allocate_node(int n)
-{
-	listint_t *new_node = malloc(sizeof(listint_t));
-	if (new_node == NULL)
-		return (NULL);
-	new_node->n = n;
-	new_node->next = NULL;
-	return (new_node);
-}
-/**
  * insert_nodeint_at_index - insert a node at position
  * @head: pointer to head of the list
  * @idx: position
@@ -37,13 +25,22 @@ listint_t *allocate_node(int n)
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	listint_t *new_node, *current;
-	unsigned int i = 0, len = 0;
+	unsigned int number_node;
 
-	new_node = allocate_node(n);
-	if (*head == NULL)
+	number_node = num_node(*head);
+
+	if (*head == NULL && idx != 0 )
+		return (NULL);
+	if (idx > number_node)
+		return (NULL);
+	new_node = malloc(sizeof(listint_t));
+	if (new_node == NULL)
+		return (NULL);
+	new_node->n = n;
+	if (*head == NULL && idx == 0)
 	{
-		*head = allocate_node(n);
-		return (*head);
+		*head = new_node;
+		return (new_node);
 	}
 	if (idx == 0)
 	{
@@ -51,25 +48,18 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		*head = new_node;
 		return (*head);
 	}
-	len = num_node(*head);
-	if (idx < len)
+	else
 	{
 		current = *head;
-		while (i < idx - 1 && current->next != NULL)
-		{
+		while (--idx)
 			current = current->next;
-			i++;
+		if (current == NULL)
+		{
+			free (new_node);
+			return (NULL);
 		}
-	}
-	if (current != NULL)
-	{
 		new_node->next = current->next;
 		current->next = new_node;
+		return (new_node);
 	}
-	if (*head == NULL)
-	{
-		free(new_node);
-		return (NULL);
-	}
-	return (new_node);
 }
