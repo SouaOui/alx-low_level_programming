@@ -10,7 +10,7 @@ unsigned int num_node(listint_t *head)
 
 	while (head)
 	{
-		len++;
+		len += 1;
 		head = head->next;
 	}
 	return (len);
