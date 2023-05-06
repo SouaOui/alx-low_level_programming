@@ -8,8 +8,7 @@
 int get_bit(unsigned long int n, unsigned int index)
 {
 	int bit_status;
-
-	bit_status = (n >> index) & 1;
-
+	if (index <= 31)
+		bit_status = (n >> index) & 1;
 	return (bit_status);
 }
