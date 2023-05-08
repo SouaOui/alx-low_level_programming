@@ -2,7 +2,7 @@
 /**
  * create_file - function that creates a file
  * @filename: pointer to the file const char
- * @text_context: pointer to the text to be inserted in the file
+ * @text_content: pointer to the text to be inserted in the file
  * Return: 1 on success and -1 on failure
  */
 int create_file(const char *filename, char *text_content)
