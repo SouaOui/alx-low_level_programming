@@ -4,7 +4,7 @@
  * to have number plus one
  * @n: number of be flipped
  * @m: number to flip to
- * Return: number of times 
+ * Return: number of times
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
@@ -12,7 +12,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	unsigned long int stat;
 
 	stat = n ^ m;
-	while(stat)
+	while (stat)
 	{
 		count = count + (stat & 1);
 		stat >>= 1;
